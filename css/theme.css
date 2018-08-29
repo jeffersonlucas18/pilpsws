@@ -365,7 +365,7 @@ footer.dark1,
 header.dark1,
 div.area.dark1,
 div.widget.dark1 {
-  background-color: #136eaa;
+  background-color: #f4f7f9;
 }
 
 section.dark2,
@@ -789,7 +789,7 @@ h3 {
 
 h4 {
   font: 300 20px/29px "Poppins", sans-serif;
-  color: #5BC0BE;
+  color: #136eaa;
   margin: 15px 0;
 }
 @media (max-width: 767px) {
@@ -1043,6 +1043,7 @@ a.btn:hover::after {
 }
 @media (max-width: 767px) {
   a.btn {
+    display: none;
     min-width: 46%;
     text-align: center;
     padding: 13px 20px 14px;
@@ -4299,7 +4300,7 @@ form.contact-form textarea {
   padding: 10px 15px 11px;
 }
 form.contact-form input[type="submit"] {
-  border-color: #5BC0BE;
+  border-color: #136eaa;
 }
 @media (max-width: 767px) {
   form.contact-form input[type="submit"] {
@@ -4357,7 +4358,7 @@ form.contact-form .messages button {
 input[type="submit"] {
   background: transparent;
   width: auto;
-  color: #5BC0BE;
+  color: #136eaa;
   border-color: #5BC0BE;
 }
 input[type="submit"].disabled {
@@ -4365,7 +4366,7 @@ input[type="submit"].disabled {
 }
 input[type="submit"].disabled:hover {
   background: transparent;
-  color: #5BC0BE;
+  color: #136eaa;
   cursor: initial;
 }
 input[type="submit"]:hover {
@@ -4374,7 +4375,7 @@ input[type="submit"]:hover {
 }
 @media (max-width: 767px) {
   input[type="submit"] {
-    background: #5BC0BE;
+    background: #136eaa;
     color: white;
   }
 }
@@ -4779,6 +4780,7 @@ footer#smart .social i {
 }
 footer#smart .footer-text {
   font-size: 12px;
+  text-align: center;
 }
 footer#smart .footer-text a {
   font-size: 12px;
