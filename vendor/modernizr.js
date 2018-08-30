@@ -1,3 +1,39 @@
+window.GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeNGzjQJa8_02wHLWakjHmaeZXyZ0qNu3dR1A0WM4Ae0Mq6Jg/formResponse";
+window.FIELDS_MAPS = {
+    //"NAME_CAMPO_SITE":"NAME_CAMPO_GOOGLE_FORM",
+    "name": "entry.450467161",
+    "email": "entry.14153459",
+    "tel": "entry.1071387997",
+    "Message": "entry.1305601900",};
+var inputs = document.getElementById("contact_form").querySelectorAll("input");
+            var post_data = {};
+            for (const input of inputs) {
+                if (FIELDS_MAPS[input.name])
+                    post_data[FIELDS_MAPS[input.name]] = input.value;
+            }
+            var output;
+            //Ajax post data to server
+            $.ajax({
+                url: GOOGLE_FORM_URL,
+                type: "POST",
+                crossDomain: true,
+                data: post_data,
+                dataType: 'json',
+                accepts: "text/html; charset=utf-8",
+                success: function (response) {
+                    if (response.type == 'error') {
+                        output = '<div class="error">' + response.text + '</div>';
+                    } else {
+                        window.location.href = REDIRECT_TO;
+                    }
+                },
+                error: function (xhr, status) {
+                    var msg = "Desculpe! Ocorreu um erro inesperado."
+                    output = '<div class="error">' + msg + '</div>';
+                    $(theform).find('#result').hide().html(output).slideDown();
+                }
+            });
+
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
  */
