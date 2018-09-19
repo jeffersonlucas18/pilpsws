@@ -388,7 +388,7 @@ section.primary,
 footer.primary,
 div.area.primary,
 div.widget.primary {
-  background-color: #5BC0BE;
+  background-color: rgb(2, 20, 59);
 }
 
 hr {
@@ -970,7 +970,7 @@ i {
   color: #fff;
 }
 .primary a.btn:hover span {
-  color: #5BC0BE;
+  color: #136eaa;
 }
 .primary a.btn::after {
   background-color: #fff;
@@ -3107,7 +3107,6 @@ header#sp3 {
   position: relative;
   background-size: cover;
   overflow: hidden;
-  height: 177px;
   padding-top: 110px;
   padding-left: 20px;
   padding-right: 20px;
