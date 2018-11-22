@@ -3967,6 +3967,7 @@ header#sp3.primary a:hover {
   text-align: center;
   top: 19px;
   position: relative;
+  height: 55px;
 }
 .gallery .owl-controls .owl-dots .owl-dot {
   width: 10px;
